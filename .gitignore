@@ -12,7 +12,8 @@
 # python virtualenv
 venv/
 
-# scm files
-log/
-exp/
-*.dot
+# experiment's generated files
+experiments/
+
+# java output files
+target/

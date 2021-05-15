@@ -9,15 +9,7 @@
     - docker-compose version 1.25.0
 - Steps to run (run for all mdgs):
     $ cd scam2020
-    $ bash run_all.sh --start
-
-### Python
-
-- System requirements: python 3.7 +
-- Steps to run:
-    - Compile the SCM tools (Bunch and Draco) binarie's files (instructions below)
-    - Run the analyzer with the desired parameters: 
-        $ python3 main.py <test, small, medium, large, all>
+    $ bash run.sh --start experiment_1
 
 ## SCM Tools 
 
@@ -25,7 +17,7 @@
 
 - System requirements: javac 1.8.0_265 +
 - Compile java file and generates a `BunchAPITest.class`:
-    $ javac -cp '.:bunch/Bunch-3.5.jar' bunch/BunchAPITest.java
+    $ javac -cp '.:bunch/src/Bunch-3.5.jar' bunch/src/BunchAPITest.java
 
 ### Draco
 
@@ -35,3 +27,7 @@
 - Compile go file and generates a binary file called `main`:
     $ go build -o draco/main draco/main.go
 
+
+## How to add new experiment
+- Add a folder inside graphs directory and add all of the mdgs that are a part of the experiment/
+- Example: graphs/example/test.mdg
